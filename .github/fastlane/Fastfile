@@ -1,5 +1,5 @@
 default_platform(:ios)
- 
+
 platform :ios do
   desc "Upload IPA to App Store"
   lane :upload do
@@ -10,6 +10,7 @@ platform :ios do
       skip_screenshots: true, # 跳过截图上传
       submit_for_review: false, # 不提交审核（仅上传 IPA）
       run_precheck_before_submit: false, # 禁用预检查
+      team_id: ENV["APP_STORE_CONNECT_TEAM_ID"],
       api_key: app_store_connect_api_key(
         key_id: ENV["APP_STORE_CONNECT_API_KEY_ID"],
         issuer_id: ENV["APP_STORE_CONNECT_ISSUER_ID"],
