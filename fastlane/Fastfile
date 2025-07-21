@@ -3,6 +3,7 @@ default_platform(:ios)
 platform :ios do
   desc "Upload IPA to App Store"
   lane :upload do
+    auto_increment_build_number # 自动递增 build 号
     deliver(
       ipa: "release/AnxinMDMSpace_4.0.3002_20250721095635_resign.ipa",
       force: true, # 覆盖已存在的版本
