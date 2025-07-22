@@ -4,7 +4,7 @@ platform :ios do
   desc "Upload IPA to App Store"
   lane :upload do
     deliver(
-      ipa: "release/AnxinMDMSpace_4.0.3003_20250721182749_resign.ipa",
+      ipa: "release/AnxinSpace_4.0.3005_20250722090750_resign.ipa",
       force: true, # 覆盖已存在的版本
       skip_metadata: true, # 跳过元数据上传
       skip_screenshots: true, # 跳过截图上传
