@@ -4,7 +4,7 @@ platform :ios do
   desc "Upload IPA to App Store"
   lane :upload do
     deliver(
-      ipa: "release/AnxinSpace_4.0.3011_20260209093224_resign.ipa",
+      ipa: "release/PSN_Workspace_4.1.3003_20260323095539_resign.ipa",
       force: true, # 覆盖已存在的版本
       skip_metadata: true, # 跳过元数据上传
       skip_screenshots: true, # 跳过截图上传
